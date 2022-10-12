@@ -1,0 +1,125 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3">
+                <div *ngFor="let i of biodataData.users"
+                    class="col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xxl-3">
+
+                    <div class="card">
+                        <img src="{{i.image}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{i.firstName}} "{{i.maidenName}}" {{i.lastName}}</h5>
+                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed fs-5" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                            aria-expanded="false" aria-controls="flush-collapseOne">
+                                            Basic Details
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <p><span class="fw-bold">Age: </span> {{i.age}}</p>
+                                            <p><span class="fw-bold">Gender: </span> {{i.gender}}</p>
+                                            <p><span class="fw-bold">Email: </span> {{i.email}}</p>
+                                            <p><span class="fw-bold">Phone: </span> {{i.phone}}</p>
+                                            <p><span class="fw-bold">Blood Group: </span> {{i.bloodGroup}}</p>
+                                            <p><span class="fw-bold">Date of Birth: </span> {{i.birthDate}}</p>
+                                            <p><span class="fw-bold">Socail Security Number: </span> {{i.ssn}}</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingTwo">
+                                        <button class="accordion-button collapsed fs-5" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                            aria-expanded="false" aria-controls="flush-collapseTwo">
+                                            Body Details
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <p><span class="fw-bold">Height: </span> {{i.height}}</p>
+                                            <p><span class="fw-bold">Weight: </span> {{i.weight}}</p>
+                                            <p><span class="fw-bold">Eye Color: </span> {{i.eyeColor}}</p>
+                                            <p><span class="fw-bold">Hair Color: </span> {{i.hair.color}}</p>
+                                            <p><span class="fw-bold">Hair Type: </span> {{i.hair.type}}</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingThree">
+                                        <button class="accordion-button collapsed fs-5" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                            aria-expanded="false" aria-controls="flush-collapseThree">
+                                            Address
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <p><span class="fw-bold">Address: </span> {{i.address.address}}</p>
+                                            <p><span class="fw-bold">City: </span> {{i.address.city}}</p>
+                                            <p><span class="fw-bold">Postal Code: </span> {{i.address.postalCode}}</p>
+                                            <p><span class="fw-bold">State: </span> {{i.address.state}}</p>
+                                            <p><span class="fw-bold">Latitude: </span> {{i.address.coordinates.lat}}</p>
+                                            <p><span class="fw-bold">Logitude: </span> {{i.address.coordinates.lng}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingThree">
+                                        <button class="accordion-button collapsed fs-5" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseFour"
+                                            aria-expanded="false" aria-controls="flush-collapseFour">
+                                            Company
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <p><span class="fw-bold">Latitude: </span> {{i.company.name}}</p>
+                                            <p><span class="fw-bold">Logitude: </span> {{i.company.title}}</p>
+                                            <p><span class="fw-bold">State: </span> {{i.company.department}}</p>
+                                            <p><span class="fw-bold">Company Address: </span> {{i.company.address.address}}</p>
+                                            <p><span class="fw-bold">City: </span> {{i.company.address.city}}</p>
+                                            <p><span class="fw-bold">Postal Code: </span> {{i.company.address.postalCode}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingThree">
+                                        <button class="accordion-button collapsed fs-5" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseFive"
+                                            aria-expanded="false" aria-controls="flush-collapseFive">
+                                            Bank details
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseFive" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <p><span class="fw-bold">Card Number: </span> {{i.bank.cardNumber}}</p>
+                                            <p><span class="fw-bold">Card Expiry: </span> {{i.bank.cardExpire}}</p>
+                                            <p><span class="fw-bold">Card Type: </span> {{i.bank.cardType}}</p>
+                                            <p><span class="fw-bold">Currency: </span> {{i.bank.currency}}</p>
+                                            <p><span class="fw-bold">Ibn: </span> {{i.bank.iban}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
